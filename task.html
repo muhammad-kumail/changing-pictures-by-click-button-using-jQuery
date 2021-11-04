@@ -22,7 +22,10 @@
         });
         $("button").click(function () {
           if (index > 3) index = 0;
-          $(".image1").attr("src", images[index]);
+          $(".image1")
+            .fadeOut("fast")
+            .attr("src", images[index])
+            .fadeIn("slow");
           index++;
         });
       });
